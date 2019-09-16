@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>全视界全景</title>
+	<link rel='icon' href='../images/favicon.ico' mce_href='../images/favicon.ico' type='image/x-icon'>
+	<link rel='shortcut icon' href='../images/favicon.ico' mce_href='../images/favicon.ico' type='image/x-icon'>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/pano.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js/jquery-1.11.1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+
+		$(function(){
+			$(window).scroll(function(){
+            	var h=$(window).scrollTop()
+            	if(h>50){
+            		$('.navtop').addClass('add')
+            		$('.navtop .navbar-brand').addClass('logo')
+            	}else{
+            		$('.navtop').removeClass('add')
+            		$('.navtop .navbar-brand').removeClass('logo')
+            	}
+            })
+            $(window).scroll(function(event){
+            	var h=$(window).scrollTop()
+            	if(h>400){
+            		$('.bottombtn').show()
+            	}else{
+            		$('.bottombtn').hide()
+            	}
+            });
+            $(window).scroll(function(e){
+            	var h=$(window).scrollTop()
+            	var h1=$('.banner').offset().top;
+            	var h2=$('.content').offset().top;
+            	var h3=$('.content2').offset().top;
+            	var h4=$('.content3').offset().top;
+            	if(h>=h1&&h<h2){
+            		$('.asidedot li').eq(0).addClass('listactive').siblings('li').removeClass('listactive')
+            	}else if(h>=h2&&h<h3){
+            		$('.asidedot li').eq(1).addClass('listactive').siblings('li').removeClass('listactive')
+            	}else if(h>=h3&&h<h4){
+            		$('.asidedot li').eq(2).addClass('listactive').siblings('li').removeClass('listactive')
+            	}else if(h>=h4){
+            		$('.asidedot li').eq(3).addClass('listactive').siblings('li').removeClass('listactive')
+            	}
+            });
+
+            $('.navtop .navul li').click(function(){
+            	$(this).addClass('navactive').siblings('li').removeClass('navactive')
+            })
+             $('.asidedot').hover(function() {
+				$('.asidedot').css('transform', 'scale(3)');
+				$('.asidedot span').css('transform', 'scale(0.4)')
+				$('.asidewrap').css('right', '0px');
+			}, function() {
+				$('.asidedot').css('transform', 'scale(1)')
+				$('.asidedot span').css('transform', 'scale(0)')
+				$('.asidewrap').css('right', '-100px');
+			});
+            $('.asidedot li').click(function(event){
+            	$(this).addClass('listactive').siblings('li').removeClass('listactive')
+            });
+            $('.rowwrap').hover(function() {
+            	$(this).children('.threehide').show(10);
+            	$(this).children('.hideimg1').children('img').css('transform', 'scale(1.3)');
+            	$(this).find('.hideimg').css('transform', 'translate(0px,-30px)');
+            	$(this).css('box-shadow', '0px 0px 5px 3px rgba(0,0,0,0.1)');
+            	
+            }, function() {
+            	$(this).children('.threehide').hide(10);
+            	$(this).children('.hideimg1').children('img').css('transform', 'scale(1)');
+            	$(this).find('.hideimg').css('transform', 'translate(0px,0px)');
+            	$(this).css('box-shadow', '0px 0px 0px 0px rgba(0,0,0,0)');
+            });
+            $('.bottombtn').click(function(){
+            	$('html,body').animate({'scrollTop':0}, 500)
+            });
+            $('.asidedot li').eq(0).click(function(){
+            	var h=$('.banner').offset().top;
+            	$('html,body').animate({'scrollTop':h},500)
+            })
+            $('.asidedot li').eq(1).click(function(){
+            	var h=$('.content').offset().top;
+            	$('html,body').animate({'scrollTop':h},500)
+            })
+            $('.asidedot li').eq(2).click(function(){
+            	var h=$('.content2').offset().top;
+            	$('html,body').animate({'scrollTop':h},500)
+            })
+            $('.asidedot li').eq(3).click(function(){
+            	var h=$('.content3').offset().top;
+            	$('html,body').animate({'scrollTop':h},500)
+            })
+		})
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-default navtop">
+		<div class="container">
+			<div class="container-fluid">
+		    	<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		      		</button>
+		      		<h1 class="logoh1"><a class="navbar-brand" href="../html/panoramic.html"><img src="../images/qsjqjlogo.png" alt="全视界全景" width="40px">&nbsp;&nbsp;全视界全景</a></h1>
+		    	</div>
+		    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      		<ul class="nav navul navbar-nav navbar-right">
+				        <li><a href="../index.html">特甜VR</a></li>
+				        <li><a href="panoramic.html" class="navactive">全视界全景</a></li>
+				        <li><a href="about.html">关于我们</a></li>
+				        <li><a href="contact.html">联系我们</a></li>
+		     		</ul>
+		    	</div>
+		  	</div>
+		</div>
+	</nav>
+	<aside>
+		<div class="asidedot">
+			<ul>
+				<li class="listactive"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></li>
+				<li><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></li>
+				<li><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span></li>
+				<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span></li>
+			</ul>
+		</div>
+		<div class="asidewrap">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">全景拍摄</a></li>
+				<li><a href="#">全景直播</a></li>
+				<li><a href="#">合作伙伴</a></li>
+			</ul>
+		</div>
+	</aside>
+	<section>
+		<div class="banner">
+			<iframe src="http://www.luobotetian.com/pano/index.html" frameborder="0" width="100%" height="800"></iframe>
+			<div class="carousel-caption">
+				<img src="../images/t4.png" alt="" class="wow fadeInUp banimg" data-wow-delay='0.5s'><br>
+			    <a href="#"><span class="glyphicon glyphicon-menu-down banicon" aria-hidden="true"></span></a><br>
+			    <a href="#"><span class="glyphicon glyphicon-menu-down banicon" aria-hidden="true"></span></a>
+	      	</div>
+		</div>
+		<div class="content">
+			<div class="contitle">
+					<img src="../images/title-top.png" alt="" class="wow slideInDown">
+					<h4 class="wow slideInDown">全景拍摄</h4>
+					<h5 class="wow slideInUp">全景  让精彩更进一步</h5>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-4 wow fadeInUp" data-wow-delay='0.1s'>
+						<div class="thumbnail cont1">
+						    <div class="con1">
+						    	<img src="../images/quanjing01.png" alt="...">
+						    	<h5>720°无死角</h5>
+						    </div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-4 wow fadeInUp" data-wow-delay='0.3s'>
+						<div class="thumbnail cont1">
+						    <div class="con1">
+						    	<img src="../images/quanjing02.png" alt="...">
+						    	<h5>立体化全场景</h5>
+						    </div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-4 wow fadeInUp" data-wow-delay='0.5s'>
+						<div class="thumbnail cont1">
+						    <div class="con1">
+						    	<img src="../images/quanjing03.png" alt="...">
+						    	<h5>全平台完美兼容</h5>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="contitle">
+					<h5 class="wow slideInDown">拍摄案例</h5>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-4 wow fadeInUp">
+						<div class="thumbnail rowwrap">
+						    <div class="hideimg1">
+						    	<img src="../images/img1.jpg" alt="...">
+						    </div>
+						    <div class="caption">
+							    <p>冠城大通蓝郡</p>
+						    </div>
+						    <div class="threehide">
+						    <div class="smallhide">
+						      	<p>电脑端直接点击二维码</p>
+						      	<p>手机端体验更多请扫码</p>
+						    </div>
+						      	<a href="#"><img src="../images/quanma01.png" alt="" class="hideimg"></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 wow fadeInUp">
+						<div class="thumbnail rowwrap">
+						    <div class="hideimg1">
+						    	<img src="../images/img2.jpg" alt="...">
+						    </div>
+						    <div class="caption">
+							    <p>南京长江大桥</p>
+						    </div>
+						    <div class="threehide">
+						    <div class="smallhide">
+						      	<p>电脑端直接点击二维码</p>
+						      	<p>手机端体验更多请扫码</p>
+						    </div>
+						      	<a href="#"><img src="../images/quanma02.png" alt="" class="hideimg"></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 wow fadeInUp">
+						<div class="thumbnail rowwrap">
+						    <div class="hideimg1">
+						    	<img src="../images/img3.jpg" alt="...">
+						    </div>
+						    <div class="caption">
+							    <p>美国别墅庄园</p>
+						    </div>
+						    <div class="threehide">
+						    <div class="smallhide">
+						      	<p>电脑端直接点击二维码</p>
+						      	<p>手机端体验更多请扫码</p>
+						    </div>
+						      	<a href="#"><img src="../images/quanma03.png" alt="" class="hideimg"></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 wow fadeInUp">
+						<div class="thumbnail rowwrap">
+						    <div class="hideimg1">
+						    	<img src="../images/img4.jpg" alt="...">
+						    </div>
+						    <div class="caption">
+							    <p>小区航拍</p>
+						    </div>
+						    <div class="threehide">
+						    <div class="smallhide">
+						      	<p>电脑端直接点击二维码</p>
+						      	<p>手机端体验更多请扫码</p>
+						    </div>
+						      	<a href="#"><img src="../images/quanma04.png" alt="" class="hideimg"></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 wow fadeInUp">
+						<div class="thumbnail rowwrap">
+						    <div class="hideimg1">
+						    	<img src="../images/img5.jpg" alt="...">
+						    </div>
+						    <div class="caption">
+							    <p>婚礼现场</p>
+						    </div>
+						    <div class="threehide">
+						    <div class="smallhide">
+						      	<p>电脑端直接点击二维码</p>
+						      	<p>手机端体验更多请扫码</p>
+						    </div>
+						      	<a href="#"><img src="../images/quanma05.png" alt="" class="hideimg"></a>
+						    </div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 wow fadeInUp">
+						<div class="thumbnail rowwrap">
+						    <div class="hideimg1">
+						    	<img src="../images/img6.jpg" alt="...">
+						    </div>
+						    <div class="caption">
+							    <p>汇银乐虎</p>
+						    </div>
+						    <div class="threehide">
+						    <div class="smallhide">
+						      	<p>电脑端直接点击二维码</p>
+						      	<p>手机端体验更多请扫码</p>
+						    </div>
+						      	<a href="#"><img src="../images/quanma06.png" alt="" class="hideimg"></a>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content2">
+			<div class="bigtext">
+				<img src="../images/t21.png" alt="" class="wow fadeInUp">
+			</div>
+			<div class="twoblock">
+				<div class="container">
+					<div class="contitle">
+						<img src="../images/title-top.png" alt="" class="wow fadeInDown" data-wow-delay='0.3s'>
+						<h4 class="wow fadeInDown" data-wow-delay='0.3s'>全景直播</h4>
+						<h5 class="wow fadeInUp" data-wow-delay='0.3s'>你在或不在，你都在那里</h5>
+					</div>
+					<div class="twoimg">
+					  	<img src="../images/vrlive.jpg" alt="..." class="col-xs-12 col-md-12 wow fadeInUp" data-wow-delay='0.2s'>
+						<div class="twotext wow fadeInUp" data-wow-delay='0.5s'>
+						  	<p>全景视频直播解决方案所带来的720°全沉浸式视觉体验服务</p>
+							<p>让用户只需要滑动手机屏幕或者佩戴VR头盔</p>
+							<p>即可获得身临现场的全方位同步视听体验</p>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<div class="content3">
+			<div class="bigtext">
+				<img src="../images/t5.png" alt="" class="wow fadeInUp">
+			</div>
+			<div class="threeblock">
+				<div class="container">
+					<div class="contitle">
+						<img src="../images/title-top.png" alt="" class="wow fadeInDown">
+						<h4 class="wow fadeInDown">合作伙伴</h4>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 col-md-3 wow fadeInDown" data-wow-delay='0.1s'>
+					    	<a href="#" class="thumbnail rowwrap2">
+					      	<img src="../images/njmls.jpg" alt="..." width="190">
+					    	</a>
+					  	</div>
+					  	<div class="col-xs-6 col-md-3 wow fadeInDown" data-wow-delay='0.3s'>
+					    	<a href="#" class="thumbnail rowwrap2">
+					      	<img src="../images/hylh.png" alt="...">
+					    	</a>
+					  	</div>
+					  	<div class="col-xs-6 col-md-3 wow fadeInDown" data-wow-delay='0.6s'>
+					    	<a href="#" class="thumbnail rowwrap2">
+					      	<img src="../images/gcdt.jpg" alt="...">
+					    	</a>
+					  	</div>
+					  	<div class="col-xs-6 col-md-3 wow fadeInDown" data-wow-delay='0.9s'>
+					    	<a href="#" class="thumbnail rowwrap2">
+					      	<img src="../images/hsl.png" alt="...">
+					    	</a>
+					  	</div>
+					  	<div class="col-xs-6 col-md-3 wow fadeInUp" data-wow-delay='0.1s'>
+					    	<a href="#" class="thumbnail rowwrap2">
+					      	<img src="../images/insta.png" alt="...">
+					    	</a>
+					  	</div>
+					  	<div class="col-xs-6 col-md-3 wow fadeInUp" data-wow-delay='0.3s'>
+					    	<a href="#" class="thumbnail rowwrap2">
+					      	<img src="../images/dj.png" alt="...">
+					    	</a>
+					  	</div>
+					  	<div class="col-xs-6 col-md-3 wow fadeInUp" data-wow-delay='0.6s'>
+					    	<a href="#" class="thumbnail rowwrap2">
+					      	<img src="../images/theta.png" alt="...">
+					    	</a>
+					  	</div>
+					  	<div class="col-xs-6 col-md-3 wow fadeInUp" data-wow-delay='0.9s'>
+					    	<a href="#" class="thumbnail rowwrap2">
+					      	<img src="../images/gear.PNG" alt="...">
+					    	</a>
+					  	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="fbottom">
+					<div class="fone">
+						<ul class="bigicon">
+							<li class="wow rotateInDownLeft" data-wow-delay='0.3s'><a href="#"><img src="../images/taobao.png" alt="" title="淘宝商城"></a></li>
+							<li class="wow rotateIn" data-wow-delay='0.3s'><a href="#"><img src="../images/icon-weixin.png" alt="" width="25px" title="微信"></a></li>
+							<li class="wow rotateInDownRight" data-wow-delay='0.3s'><a href="#"><i class="glyphicon glyphicon-header" aria-hidden="true" title="HTML5"></i></a></li>
+						</ul>
+					</div>
+					<p class="text1">&copy; 2016 南京萝卜特甜信息科技有限公司</p>
+					<p><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> 南京市建邺区江东中路98号河西万达广场F座812室</p>
+					<p class="text2"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>  1 5 6 5 1 8 5 5 1 5 8</p>
+					<p>苏ICP备15041839号</p>
+				</div>	
+			</div>
+		</div>
+		<div class="bottombtn">
+			<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+		</div>
+	</section>
+</body>
+</html>

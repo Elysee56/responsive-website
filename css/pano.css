@@ -1,0 +1,412 @@
+body{
+	font-family: '微软雅黑';
+}
+a{
+	font-family: '微软雅黑';
+	color: #fff;
+}
+.navtop{
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	margin-bottom: 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 11;
+}
+.add{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #000;
+	height: 60px;
+	transition: 2s;
+}
+.navtop .navbar-toggle{
+	margin-top: 15px;
+	border-color:transparent; 
+	background-color:transparent;
+}
+.navtop .navbar-toggle:hover{
+	background-color:transparent;
+}
+.navtop .navbar-toggle:focus{
+	background-color:transparent;
+}
+.navtop .navbar-toggle .icon-bar{
+	background-color: #fff
+}
+.navtop .navbar-collapse{
+	border: transparent;
+}
+.logo{
+	margin-top: -10px;
+}
+.navtop .navbar-brand{
+	margin-top: -20px;
+}
+.navtop .logoh1 img{
+	float: left;
+}
+.navtop .logoh1 a{
+    color: #fff;
+    font-size: 24px;
+    line-height: 40px;
+    float: left;
+}
+.navtop .logoh1 a:hover{
+	color: #fff; 
+}
+.navtop .navul > li > a{
+    font-size: 18px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+}
+.navtop .navul > li > a:hover{
+	color: #89d1c7;
+}
+.navtop .navul > li > a:focus{
+	color: #89d1c7;
+}
+.navtop .navul .navactive{
+	color: #89d1c7;
+}
+.banner{
+	width: 100%;
+	background-color: #eee;
+}
+.banner .banimg{
+	margin-bottom: 300px;
+}
+.banner .banicon{
+	font-size: 23px;
+	line-height: 10px;
+	animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+    0%{transform: translate(0px, -15px)};
+    100%{transform: translate(0px, 0px)};
+}
+.asidedot{
+	width: 80px;
+	position: fixed;
+	top: 50%;
+	right: 0;
+	margin-top: -65px;
+	transition: 0.5s;
+	z-index: 3;
+}
+.asidedot ul{
+	padding-left: 0px;
+}
+.asidedot li{
+	list-style: none;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #ccc;
+	margin: 15px auto;
+	cursor: pointer;
+	transition: 0.4s;
+	position: relative;
+}
+.asidedot span{
+	display: inline-block;
+	transform: scale(0);
+	transition: 0.4s;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+}
+.asidewrap{
+	width: 80px;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	right: -100px;
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: 0.5s;
+	z-index: 2;
+}
+.asidewrap ul{
+	width: 80px;
+	padding-left: 0px;
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	margin-top: -150px;
+}
+.asidewrap li{
+	list-style: none;
+	margin: 55px auto;
+	text-align: center;
+}
+.asidelist a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.asidedot .listactive{
+	background-color: #89d1c7;
+}
+.asidedot li:hover{
+    background-color: #89d1c7;
+}
+.contitle{
+	width: 100%;
+	text-align: center;
+	margin: 50px auto;
+}
+.contitle h4{
+	font-size: 35px;
+	color: #777;
+}
+.contitle h5{
+	font-size: 25px;
+	color: #777;
+}
+.content{
+	width: 100%;
+	background-color: #eee;
+	padding-top: 30px;
+}
+.content .contitle{
+	margin-top: 0px;
+}
+.content .cont1{
+	border: none;
+	background-color: transparent;
+	text-align: center;
+}
+.content .cont1 h5{
+	font-size: 25px;
+	color: #777;
+}
+.content2{
+	background-image: url('../images/quan01.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+}
+.bigtext{
+	width: 100%;
+	text-align: center;
+	background-color: transparent;
+}
+.bigtext img{
+	margin: 100px 0px;
+}
+.rowwrap{
+	padding: 0px;
+	border-radius: 0px;
+	border: none;
+	position: relative;
+	margin-bottom: 50px;
+}
+.rowwrap .caption{
+	text-align: center;
+}
+.rowwrap .caption p{
+	font-size: 20px;
+}
+.twoblock{
+	background-color: #fff;
+}
+.twoblock .twoimg{
+	text-align: center;
+	margin-bottom: 50px;
+}
+.twoblock .twoimg img{
+	margin-bottom: 50px;
+}
+.twoblock .twotext p{
+	font-size: 18px;
+	color: #666;
+	margin: 10px 0px;
+}
+.threehide{
+	width: 100%;
+	height: 274px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(255, 255, 255, 0.6);
+    display: none;
+}
+.hideimg1{
+	height: 273px;
+	overflow: hidden;
+}
+.hideimg1 img{
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+}
+.threehide .smallhide{
+	width: 130px;
+	height: 40px;
+	padding: 5px;
+	color: #fff;
+	background-color: #000;
+	border-radius: 5px;
+	position: absolute;
+	top: -42px;
+	left: 50%;
+	margin-left: -65px;
+	transition: 0.5s;
+}
+.threehide .smallhide p{
+	font-size: 12px;
+	line-height: 10px;
+}
+.threehide .hideimg{
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -100px;
+	transition: 0.5s;
+}
+.rowwrap1{
+	border: none;
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px
+}
+.rowwrap1 span{
+	font-size: 60px;
+}
+.rowwrap1 h4{
+	font-weight: bold;
+}
+.rowwrap1 h5{
+	font-size: 18px;
+	line-height: 30px;
+}
+.content3{
+	background-image: url('../images/bg3.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+}
+.threeblock{
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 50px;
+}
+.rowwrap2{
+	margin: 30px 0px;
+}
+.rowwrap2:hover{
+	border: 1px solid #ccc;
+	transform: translateY(-5px);
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.2) !important;
+}
+a.rowwrap2:hover, a.rowwrap2:focus, a.rowwrap2.active{
+	border-color: #ccc;
+}
+.footer{
+	width: 100%;
+	background-color: #333;
+}
+.fbottom{
+	margin: 50px 0px;
+	color: #999;
+	text-align: center;
+	font-size: 12px;
+}
+.fone{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	position: relative;
+}
+.bigicon{
+	padding-left: 0px; 
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -105px;
+}
+.bigicon li{
+	list-style: none;
+	float: left;
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 50%;
+	background-color: #35a49c;
+}
+.bigicon i:hover{
+	color: #fff;
+}
+.bigicon li:hover{
+	transition: 0.5s;
+	transform: rotateZ(360deg);
+}
+.bigicon li:nth-child(1):hover{
+	background-color: #f56505;
+}
+.bigicon li:nth-child(2):hover{
+	background-color: #00cf0d;
+}
+.bigicon li:nth-child(3):hover{
+	background-color: #d9534f;
+}
+.text1{
+	font-size: 16px;
+}
+.text2{
+	color: #35a49c;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.text2:hover{
+	color: #89d1c7;
+}
+.bottombtn{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	background-color: #35a49c;
+	opacity: 0.6;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	cursor: pointer;
+	z-index: 5;
+	display: none;
+}
+.bottombtn:hover{
+	opacity: 1;
+}
+.bottombtn span{
+	font-size: 18px;
+	line-height: 30px;
+	color:#fff;
+}
+@media (max-width:768px){
+	.navtop{
+		background-color: #000;
+	}
+	.navul >li >a{
+		background-color: rgba(0, 0, 0, 0.3);
+		border-bottom: 1px solid #fff;
+	}
+	.navtop .navul >li >a:hover{
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.banner .banimg{
+		width: 100%;
+	}
+	.bigtext img{
+		height: 5vh;
+	}
+	aside{
+		display: none;
+	}
+}
+@media (min-width: 768px) {
+	.navul >li >a {
+    border-bottom: none;
+}
